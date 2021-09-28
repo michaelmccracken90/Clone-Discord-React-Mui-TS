@@ -38,7 +38,8 @@ export default function ChatServe(){
       background: theme.background.primary,
        height: '100vh',
        display:'flex',
-       flexDirection:'column'
+       flexDirection:'column',
+       color:theme.text.primary
        }}>
       <Box sx={{
         height:46,
@@ -54,19 +55,22 @@ export default function ChatServe(){
       height:'calc(100vh - 46px)',
       }}>
         <TabPanel value={value} index={0}>
-        inicial
+        Conheça as tecnologias usadas na aplicação 
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item 1
+        React
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item 2
+        Material Ui
       </TabPanel>
         <TabPanel value={value} index={3}>
-       item 3
+       TypeScript
       </TabPanel>
-      <TabPanel value={value} index={4}>
-        Item 4
+      <TabPanel value={value} index={4} >
+        React Icons
+      </TabPanel>
+      <TabPanel value={value} index={5}>
+        React Router Dom
       </TabPanel>
      
       

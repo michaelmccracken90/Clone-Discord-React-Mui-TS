@@ -43,11 +43,11 @@ export default function ListServe() {
       <ButtonServices />
       <ButtonServices isHome hasNotification />
       <ButtonServices />
-      <ButtonServices mentions={23} />
+      <ButtonServices mentions={2} />
       <ButtonServices />
       <ButtonServices isHome hasNotification />
       <ButtonServices />
-      <ButtonServices mentions={23} />
+      <ButtonServices mentions={203} />
       <ButtonServices />
       <ButtonServices isHome hasNotification />
       <ButtonServices />

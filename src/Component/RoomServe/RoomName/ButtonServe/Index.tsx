@@ -7,12 +7,17 @@ import ListItemButton, {ListItemButtonProps} from '@mui/material/ListItemButton'
 import { IconButton, ListItemIcon, ListItemSecondaryAction, ListItemText } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
 // Tipando as propriedades que o componente recebera
-
+import { BsPersonPlusFill } from "react-icons/bs";
+import { BsGearFill } from "react-icons/bs";
+import { FaHashtag } from "react-icons/fa";
+import theme from '../../../../Styles/Theme'
 // Estilo do component
 //  para manter a estilização organizada, entra apenas dois niveis dentro de cada escopo,
-
 const useStyles = makeStyles({
-
+icon:{
+  maxWidth: '24px',
+  maxHeight: '24px',
+}
 
  
 });
@@ -48,13 +53,16 @@ export default function ButtonServices(props: Props  & Omit<ListItemButtonProps,
   // return <ListItemButton selected={selectedIndex === 1} onClick={(event) => handleListItemClick(event, 1)}
   return <ListItemButton selected={props.selected} onClick={props.onClick} onChange={props.onChange}  {...a11yProps(props.index)}
   sx={{
+    color: theme.text.primary,
     position: 'relative',
     paddingRight: '50px',
     '& .Teste': {
+     
       display:'none'
     },
     '&:hover': {
       '& .Teste ' : {
+        
         zIndex: 10,
         display: 'block',
         '&:hover': {
@@ -65,28 +73,34 @@ export default function ButtonServices(props: Props  & Omit<ListItemButtonProps,
 >
   <ListItemIcon sx={{
     margin: 0,
+    marginRight: 1,
     padding: 0,
     minWidth: 'auto',
+    color:theme.text.primary
   }}>
-    <SendIcon />
+    <FaHashtag />
   </ListItemIcon>
   
   <ListItemText primary= {props.text} />
   
-  <ListItemSecondaryAction className='Teste'>
+  <ListItemSecondaryAction className='Teste' >
 
-    <ListItemIcon>
-      <Tooltip title='config'>
+    <ListItemIcon sx={{minWidth:40}}>
+      <Tooltip title='Add Friends'>
 
-      <IconButton>
+      <IconButton sx={{ marginRight: '5px', padding: 0, color:theme.text.primary, maxWidth:'16px', }}  >
 
-      <SendIcon sx={{ margin: 0, padding: 0,  }} />
+      <BsPersonPlusFill  className={classes.icon}/>
       </IconButton>
       </Tooltip>
-      <IconButton>
+      <Tooltip title='Config'>
 
-      <SendIcon sx={{ margin: 0, padding: 0,  }} />
+      <IconButton sx={{ margin: 0, padding: 0, color:theme.text.primary, maxWidth:'16px', gap:5}}  >
+
+      <BsGearFill className={classes.icon} />
       </IconButton>
+      </Tooltip>
+     
       
     </ListItemIcon>
 

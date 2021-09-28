@@ -93,7 +93,7 @@ const useStyles = makeStyles({
     },
     '&::after': {
 
-
+      textAlign:'right',
       alignItems:'center',
       justifyContent:'center',
       fontFamily: 'Roboto',
@@ -101,7 +101,7 @@ const useStyles = makeStyles({
       backgroundColor: '#f84a4b',
       minWidth: '25px',
       width: 'auto',
-      height: 25,
+      height: 28,
 
       padding: '2px  ',
 

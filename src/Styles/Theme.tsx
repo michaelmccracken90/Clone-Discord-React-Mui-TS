@@ -9,7 +9,11 @@ declare module '@mui/material/styles' {
       active: React.CSSProperties['color'];
       input: React.CSSProperties['color'];
       user: React.CSSProperties['color'];
-    };
+      
+    },
+    text:{
+      primary: React.CSSProperties['color'];
+    }
   }
   interface ThemeOptions {
     background: {
@@ -19,12 +23,19 @@ declare module '@mui/material/styles' {
       active: React.CSSProperties['color'];
       input: React.CSSProperties['color'];
       user: React.CSSProperties['color'];
-    };
+      
+    },
+    text:{
+      primary: React.CSSProperties['color'];
+    }
   }
 
 }
 // A custom theme for this app
 const theme = createTheme({
+  text:{
+primary:"#8a8c90"
+  },
 
   background: {
     primary: '#36393F',

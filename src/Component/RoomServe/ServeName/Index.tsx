@@ -21,8 +21,8 @@ export default function ServeName() {
     }}>
       <ListItemButton onClick={handleClick}>
         
-        <ListItemText primary="Servidor DEV" />
-        {open ? <ExpandLess /> : <ExpandMore />}
+        <ListItemText primary="Servidor DEV"  sx={{color: theme.text.primary}}/>
+        {open ? <ExpandLess sx={{color: theme.text.primary}} /> : <ExpandMore sx={{color: theme.text.primary}}/>}
       </ListItemButton>
 
     </Box>
