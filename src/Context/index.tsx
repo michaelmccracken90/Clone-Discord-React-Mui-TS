@@ -5,25 +5,26 @@ import React from 'react';
 import { createContext, ReactNode,  } from "react";
 
 
-// Tipoagem do que o context exportara
+// Tipagem do que o context exportara
 type AuthContextType = {
   value: number
   selectedIndex: number
   handleListItemClick: any
   handleChange: any
-  // selectedIndex:  selectedIndex
  
 }
 
 type AuthContextProviderProps = {
   children: ReactNode;
-  
-  
 }
 
+// Exportando context 
 export const AuthContext = createContext({} as AuthContextType);
 
+// Exportando component contexto provider
 export function AuthContextProvider(props: AuthContextProviderProps) {
+
+  // Context for Select list item and page of render
   const [selectedIndex, setSelectedIndex] = React.useState(0);
 
   const handleListItemClick = (
@@ -32,10 +33,8 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
   ) => {
     setSelectedIndex(index);
   };
- 
 
-  
-
+  // Context for  change Page
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -43,7 +42,7 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
   };
 
   
-  
+  // HTML AuthContextProvider
   return (
     <AuthContext.Provider value={{  selectedIndex, handleListItemClick, value, handleChange  }}>
       {props.children}
