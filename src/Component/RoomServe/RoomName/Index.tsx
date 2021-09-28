@@ -12,7 +12,6 @@ import {
 } from "@mui/material";
 
 // Import Icons
-import DeleteIcon from '@mui/icons-material/Delete';
 import theme from '../../../Styles/Theme'
 import Tooltip from '@mui/material/Tooltip';
 import ButtonRoom from './ButtonServe/Index'
@@ -21,7 +20,7 @@ import ButtonRoom from './ButtonServe/Index'
 // import theme from '../../../Styles/Theme'
 import {AuthContext} from '../../../Context/index'
 export default function RoomName() {
-  const {selectedIndex, handleListItemClick, value, handleChange} = React.useContext(AuthContext)
+  const {selectedIndex, handleListItemClick,  handleChange} = React.useContext(AuthContext)
   // const [selectedIndex, setSelectedIndex] = React.useState(0);
 
   // const handleListItemClick = (
@@ -40,16 +39,8 @@ export default function RoomName() {
   // ) => {
   //   setSelectedIndex(index);
   // };
-  function HadleTeste(){
-    console.log('teste');
-    
-  }
-  function a11yProps(index: number) {
-    return {
-      id: `simple-tab-${index}`,
-      'aria-controls': `simple-tabpanel-${index}`,
-    };
-  }
+  
+  
 
   function IconToolTips(){
     return(

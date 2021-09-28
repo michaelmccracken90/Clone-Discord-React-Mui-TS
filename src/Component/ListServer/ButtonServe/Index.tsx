@@ -127,8 +127,8 @@ const useStyles = makeStyles({
       //  a logica a baixo diz chama  a props, e passar o valor do content dentro de uma interpolação que diz
       //  Que se tiver props.mentions, então retorna props.mentions
       display: (props: Props) =>
-      // Logica  abaixo bem semelhante a de cima, mudanção uma unica situação que se props mentions for maior que 0
-      // Então displau e Flex, se nao e none
+      // Logica  abaixo bem semelhante a de cima, mudanças uma unica situação que se props mentions for maior que 0
+      // Então display e Flex, se nao e none
         props.mentions && props.mentions > 0 ? 'flex' : 'none'
 
     },
@@ -148,7 +148,7 @@ const useStyles = makeStyles({
   },
 });
 
-// Cria se entao um component novo, reutlizando o buttom component do material ui,
+// Cria se entao um component novo, reutilizando o button component do material ui,
 // Aonde esse component receber a props criada e as props do componenet do material UI
 export default function ButtonServices(props: Props & Omit<MuiButtonProps, keyof Props>) {
   // Estancio todas as proprias dentro de uma unica constante, e passo essa props pro useStyles

@@ -5,7 +5,6 @@ import Tooltip from '@mui/material/Tooltip';
 // Import Component Material UI Bottom
 import ListItemButton, {ListItemButtonProps} from '@mui/material/ListItemButton';
 import { IconButton, ListItemIcon, ListItemSecondaryAction, ListItemText } from '@mui/material';
-import SendIcon from '@mui/icons-material/Send';
 // Tipando as propriedades que o componente recebera
 import { BsPersonPlusFill } from "react-icons/bs";
 import { BsGearFill } from "react-icons/bs";
@@ -21,9 +20,7 @@ icon:{
 
  
 });
-type Event ={
-  event: React.MouseEvent<HTMLDivElement, MouseEvent>
-}
+
 interface Props{
   text: string,
   index: number,
