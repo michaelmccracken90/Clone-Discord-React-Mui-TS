@@ -1,7 +1,6 @@
 // Import Img Logo
-
 import Logo from '../../../Assets/logo.svg'
-// import theme from '../../../Styles/Theme'
+
 // Import React 
 import * as React from 'react';
 
@@ -21,7 +20,6 @@ interface Props {
 
 // Estilo do component
 //  para manter a estilização organizada, entra apenas dois niveis dentro de cada escopo,
-
 const useStyles = makeStyles({
   root: {
     boxSizing:'border-box',
@@ -155,6 +153,7 @@ export default function ButtonServices(props: Props & Omit<MuiButtonProps, keyof
   const { isHome, hasNotification, mentions, selected, ...other } = props;
   const classes = useStyles(props);
   // Return então um button, com estilo criado, e todos estilos ja definidos pelo  material ui com ...other 
+  // HTML
   return <Button className={classes.root} {...other}>
     {isHome && <img src={Logo} alt='RocktSeet' />}
   </Button>;

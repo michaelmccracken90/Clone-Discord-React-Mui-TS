@@ -1,20 +1,28 @@
+// Import React
+import React from "react";
 // Material UI
 import { Box, Grid, Typography } from "@mui/material";
-import React from "react";
+// Import Context of state application
 import { AuthContext } from "../../Context";
 
-// Theme 
+// Import Context of Theme application
 import theme from '../../Styles/Theme'
+
+
+// Types of component
 interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
   value: number;
 }
-
+// Componenet Interno
 function TabPanel(props: TabPanelProps) {
+  // Estanciando props para reutilizar
   const { children, value, index, ...other } = props;
+  // Estanciando Context state  para reutilizar
   const {selectedIndex} = React.useContext(AuthContext)
 
+  //  HTML
   return (
     <div
       role="tabpanel"
@@ -31,7 +39,10 @@ function TabPanel(props: TabPanelProps) {
     </div>
   );
 }
+
+// Component of exportation
 export default function ChatServe(){
+  // Instanciando Contexto de estado para reutilizar
   const {value} = React.useContext(AuthContext)
   return(
     <Grid item xs sx={{ 
@@ -73,16 +84,12 @@ export default function ChatServe(){
         React Router Dom
       </TabPanel>
      
-      
-
       </Box>
         <Box sx={{ 
           width:240,
           height:'calc(100vh - 46px)',
            background: theme.background.secondary}}>
-
         </Box>
-
       </Box>
     </Grid>
   )

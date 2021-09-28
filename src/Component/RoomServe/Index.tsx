@@ -1,14 +1,16 @@
 // Material UI
-import { Box, Grid } from "@mui/material";
+import {  Grid } from "@mui/material";
 
-// Theme 
+// Import Context Theme Styled
 import theme from '../../Styles/Theme'
+// Import component Interno
 import RoomName from "./RoomName/Index";
 import ServeName from "./ServeName/Index";
 import UserName from "./UserName/Index";
 
-
+// Component Exported
 export default function RoomServe() {
+  // HTML Exported
   return (
     <Grid item sx={{
       background: theme.background.secondary,
@@ -19,7 +21,6 @@ export default function RoomServe() {
       display: 'flex',
       flexDirection: 'column'
     }}>
-
       <ServeName />
       <RoomName />
       <UserName />

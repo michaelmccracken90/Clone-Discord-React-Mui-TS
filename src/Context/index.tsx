@@ -1,34 +1,13 @@
-// import React, { useState, ReactNode } from 'react'
-// export const AuthContext = React.createContext({});
-// interface Props {
-//   name: string,
-//   children: ReactNode,
-// }
-// export const  AuthProvider =(props : Props) => {
-//  const [user, setUser] = useState({
-//    name: 'Reis',
-//  });
-
-
-//   return(
-//     <AuthContext.Provider value={{user, setUser}}>
-//       {props.children}
-//     </AuthContext.Provider>
-//   )
-// }
+// Import React 
 import React from 'react';
-import { createContext, ReactNode, useState } from "react";
-// import { auth, firebase } from "../services/firebase";
 
-type User = {
-  name: string;
-}
+// Import for create Context
+import { createContext, ReactNode,  } from "react";
 
 
+// Tipoagem do que o context exportara
 type AuthContextType = {
   value: number
-  user: User | undefined;
-  Handle () : Promise < void >
   selectedIndex: number
   handleListItemClick: any
   handleChange: any
@@ -53,17 +32,9 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
   ) => {
     setSelectedIndex(index);
   };
-  const [user, setUser] = useState<User>({
-    name:'Reis de Souza'
-  });
+ 
 
-  async function Handle(){
-    return(
-      setUser({
-        name:'Matheus'
-      })
-    )
-  }
+  
 
   const [value, setValue] = React.useState(0);
 
@@ -74,7 +45,7 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
   
   
   return (
-    <AuthContext.Provider value={{ user, Handle, selectedIndex, handleListItemClick, value, handleChange  }}>
+    <AuthContext.Provider value={{  selectedIndex, handleListItemClick, value, handleChange  }}>
       {props.children}
     </AuthContext.Provider>
   );

@@ -1,9 +1,9 @@
 // Import React 
 import React from 'react';
 
-// Context 
 
-// Components
+
+// Components Internos
 import ListServe from '../ListServer/Index';
 import RoomServe from '../RoomServe/Index';
 import ChatServe from '../ChatServer/Index';
@@ -12,10 +12,9 @@ import ChatServe from '../ChatServer/Index';
 import { Box } from "@mui/system";
 import { Grid } from '@mui/material';
 
-
+// Component of exportation
 export default function Layout() {
- 
-
+//  HTML
   return (
     <Box sx={{ margin: 0, padding: 0, width: '100vw', height: '100vh', }}>
       <Grid container >

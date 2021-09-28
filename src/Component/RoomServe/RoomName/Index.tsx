@@ -1,52 +1,37 @@
 // Import React
 import React from 'react';
+// Import React Icons
 import { RiAddLine } from "react-icons/ri";
 // Import Material UI
+import Tooltip from '@mui/material/Tooltip';
 import {
   Box,
   IconButton,
   List,
   ListItem,
-
   ListItemText,
 } from "@mui/material";
 
-// Import Icons
+// Import Context State
+import {AuthContext} from '../../../Context/index'
+
+// Import Context Theme Styled
 import theme from '../../../Styles/Theme'
-import Tooltip from '@mui/material/Tooltip';
+
+// Import Component Interno
 import ButtonRoom from './ButtonServe/Index'
 
-// Theme 
-// import theme from '../../../Styles/Theme'
-import {AuthContext} from '../../../Context/index'
+// Component de exportação
 export default function RoomName() {
   const {selectedIndex, handleListItemClick,  handleChange} = React.useContext(AuthContext)
-  // const [selectedIndex, setSelectedIndex] = React.useState(0);
-
-  // const handleListItemClick = (
-  //   event: React.MouseEvent<HTMLDivElement, MouseEvent>,
-  //   index: number,
-  // ) => {
-  //   console.log('cliquei');
-    
-  //   setSelectedIndex(index);
-  // };
-  // const [selectedIndex, setSelectedIndex] = React.useState(0);
-
-  // const handleListItemClick = (
-  //   event: React.MouseEvent<HTMLDivElement, MouseEvent>,
-  //   index: number,
-  // ) => {
-  //   setSelectedIndex(index);
-  // };
-  
-  
-
+// Component Interno
   function IconToolTips(){
+    // HTML Component Interno
     return(
 <Tooltip title='Add Friends'><RiAddLine /></Tooltip>
     )
   }
+  // HTML EXPORT
   return (
     <Box sx={{ height: 'calc(100vh - 98px)', }}>
 
