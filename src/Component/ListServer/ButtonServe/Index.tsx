@@ -135,7 +135,7 @@ const useStyles = makeStyles({
     transition: 'borderRadius .2s, backgroundColor .2s',
 
     // Passando  observação para duas pseudo classes
-    '&:hover, &.active':{
+    '&:hover, &.selected':{
       borderRadius:16,
       backgroundColor:(props: Props) =>
       props.isHome

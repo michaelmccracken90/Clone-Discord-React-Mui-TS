@@ -58,7 +58,7 @@ export default function ButtonServices(props: Props  & Omit<ListItemButtonProps,
      
       display:'none'
     },
-    '&:hover': {
+    '&.selected, &:hover':{
       '& .Teste ' : {
         
         zIndex: 10,

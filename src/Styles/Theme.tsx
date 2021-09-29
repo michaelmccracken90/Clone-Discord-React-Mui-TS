@@ -1,6 +1,5 @@
 // Import Material Ui, Criando contexto de Theme
 import { createTheme } from '@mui/material/styles';
-
 // Typando os novos temas criados 
 declare module '@mui/material/styles' {
   interface Theme {
