@@ -1,3 +1,4 @@
+import React, {useState} from 'react';
 // Import Component Material UI
 import { Avatar, Box, IconButton, List, ListItem, ListItemIcon,  ListItemSecondaryAction,  Tooltip, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
@@ -47,6 +48,16 @@ const useStyles = makeStyles({
   
 // Export Componenet 
 export default function UserName() {
+  const [openMic, setOpenMic]= useState(false)
+  const [openFone, setOpenFone]= useState(false)
+
+  function HandleMic(){
+    setOpenMic(!openMic)
+  }
+  function HandleFone(){
+    setOpenMic(!openMic)
+    setOpenFone(!openFone)
+  }
   const classes = useStyles()
   // HTML Exported
   return (
@@ -86,23 +97,24 @@ export default function UserName() {
       <ListItemIcon sx={{minWidth:40}}>
         <Tooltip title='Silencial' arrow>
 
-      <IconButton sx={{ marginRight: '5px', padding: 0, color:theme.text.primary, maxWidth:'16px', }}  >
-        
-      <BsMicFill  className={classes.icon}/>
+      <IconButton sx={{ marginRight: '5px', padding: 0, color:theme.text.primary, maxWidth:'16px', }}  onClick={HandleMic} >
+      {openMic ?<BsMicFill className={classes.icon} />  : <BiHeadphone className={classes.icon} /> }
+      
       </IconButton>
       </Tooltip>
       <Tooltip title='Desativa audio'arrow>
         
-      <IconButton sx={{marginRight: '5px', padding: 0, color:theme.text.primary, maxWidth:'16px', gap:5}}  >
-        
-      <BiHeadphone className={classes.icon} />
+      <IconButton sx={{marginRight: '5px', padding: 0, color:theme.text.primary, maxWidth:'16px', gap:5}} onClick={HandleFone}  >
+      {openMic ?<BiHeadphone className={classes.icon} />  : <BsMicMuteFill className={classes.icon} /> }
+
+      
       </IconButton>
       </Tooltip>
       <Tooltip title='Configurações de usuario'arrow>
         
       <IconButton sx={{ margin: 0, padding: 0, color:theme.text.primary, maxWidth:'16px', gap:5}}  >
         
-      <BsGearFill className={classes.icon} />
+        <BsGearFill className={classes.icon}/>
       </IconButton>
       </Tooltip>
      

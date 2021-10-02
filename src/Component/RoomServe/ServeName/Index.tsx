@@ -11,7 +11,7 @@ import theme from '../../../Styles/Theme'
 
 // Component Exported
 export default function ServeName() {
-  const {id, handleClick, open} = React.useContext(AuthContext)
+  const { handleClick, open} = React.useContext(AuthContext)
   // const [open, setOpen] = React.useState(true);
 
   // const handleClick = () => {

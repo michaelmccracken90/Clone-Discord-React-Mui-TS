@@ -21,7 +21,6 @@ import theme from '../../../Styles/Theme'
 
 // Import Component Interno
 import ButtonRoom from './ButtonServe/Index'
-import { height } from '@mui/system';
 
 // Component de exportação
 export default function RoomName() {
