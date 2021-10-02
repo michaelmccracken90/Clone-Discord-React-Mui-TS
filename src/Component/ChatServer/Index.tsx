@@ -118,7 +118,12 @@ export default function ChatServe() {
 
           </Typography>
         </Box>
-        <Box sx={{display:'flex'}}>
+        <Box sx={{display:'flex' ,
+        [theme.breakpoints.down('lg')]: {
+          display:'none'
+        },
+      
+      }}>
 
           <IconButton>
             <FaCircle/>
@@ -162,8 +167,9 @@ export default function ChatServe() {
       }}
       >
         <Box sx={{
-          width: 'calc(100% - 240px)',
+          width: '100%',
           height: 'calc(100vh - 46px)',
+          
         }}
         >
           <TabPanel value={value} index={0}  >
@@ -192,6 +198,9 @@ export default function ChatServe() {
           width: 240,
           height: 'calc(100vh - 46px)',
           background: theme.background.secondary,
+          [theme.breakpoints.down('lg')]: {
+            display:'none'
+          },
         }}
         />
       </Box>

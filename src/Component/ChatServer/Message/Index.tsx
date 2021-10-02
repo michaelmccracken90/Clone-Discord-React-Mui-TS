@@ -60,7 +60,7 @@ const classes = useStyles(props)
   
 
   return (
-    <Box sx={{ pb: 7 , position:'relative', maxHeight:'calc(100vh - 46px)'}} ref={ref} >
+    <Box sx={{ pb: 7 , position:'relative', maxHeight:'calc(100vh - 46px)', width:'100%'}} ref={ref} >
       <CssBaseline />
       <List sx={{
         width:'100%',
@@ -93,10 +93,26 @@ const classes = useStyles(props)
             </ListItemAvatar>
             <Box>
               <Box sx={{display: 'flex',  alignItems: 'center'}}>
+                <Box sx={{
+                  display:'flex', 
+                  [theme.breakpoints.down('sm')]: {
+                    display:'block'
+                  },
+                }}>
+
+                
 
               <Typography variant='h1' component='h1' sx={{fontSize:'16px', color:'#fff', fontWeight:'700'}} > {primary}</Typography>
               
-              <Typography variant='body1'  component='h1' sx={{display:'flex', alignItems:'center', ml:'10px' }}> {data}</Typography>
+              <Typography variant='body1'  component='h1' sx={{
+                display:'flex',
+                 alignItems:'center',
+                  ml:'10px' ,
+                  [theme.breakpoints.down('sm')]: {
+                    m:0
+                  }, 
+                  }}> {data}</Typography>
+              </Box>
               <Boot selected={boot}> Boot </Boot>
               </Box >
               <Typography variant='h1' component='h1' sx={{fontSize:'16px', color:'#ffffffcc', fontWeight:'400'}} > {secondary}</Typography>
@@ -140,6 +156,12 @@ const classes = useStyles(props)
         inputProps={{ 'aria-label': 'Conversed' }}
         multiline
       />
+      <Box sx={{
+        display: 'flex', 
+        [theme.breakpoints.down('lg')]: {
+          display:'none'
+        },
+      }}>
       <Tooltip title='Reforce os parças! de Vantagens superbacanas com bate papo Nitro ' arrow>
       <IconButton type="submit" sx={{ p: '10px', color: theme.text.primary }} aria-label="search">
         <IoIosGift />
@@ -167,6 +189,7 @@ const classes = useStyles(props)
 
         <GoSmiley />
       </IconButton>
+      </Box>
     
       </Paper>
       </Box>
