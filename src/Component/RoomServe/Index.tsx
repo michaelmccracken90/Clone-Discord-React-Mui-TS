@@ -7,7 +7,6 @@ import theme from '../../Styles/Theme'
 import RoomName from "./RoomName/Index";
 import ServeName from "./ServeName/Index";
 import UserName from "./UserName/Index";
-
 // Component Exported
 export default function RoomServe() {
   // HTML Exported

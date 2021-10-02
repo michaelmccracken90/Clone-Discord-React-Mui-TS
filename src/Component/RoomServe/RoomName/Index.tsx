@@ -11,7 +11,8 @@ import {
   ListItem,
   ListItemText,
 } from "@mui/material";
-
+import Popper from '@mui/material/Popper';
+import Fade from '@mui/material/Fade';
 // Import Context State
 import {AuthContext} from '../../../Context/index'
 
@@ -20,10 +21,11 @@ import theme from '../../../Styles/Theme'
 
 // Import Component Interno
 import ButtonRoom from './ButtonServe/Index'
+import { height } from '@mui/system';
 
 // Component de exportação
 export default function RoomName() {
-  const {selectedIndex, handleListItemClick,  handleChange} = React.useContext(AuthContext)
+  const {selectedIndex, handleListItemClick,  handleChange, id, open, anchorEl} = React.useContext(AuthContext)
 // Component Interno
   function IconToolTips(){
     // HTML Component Interno
@@ -34,6 +36,25 @@ export default function RoomName() {
   // HTML EXPORT
   return (
     <Box sx={{ height: 'calc(100vh - 98px)', }}>
+      <Popper id={id} open={open} anchorEl={anchorEl} transition >
+        {({ TransitionProps }) => (
+          <Fade {...TransitionProps} timeout={150}>
+            <Box sx={{
+               
+               p: 1,
+               bgcolor: theme.background.tertiary,
+               margin:'7px 10px',
+               height: '300px',
+               width:'220px',
+               borderRadius:'5px',
+               color:'#fff'
+               
+               }}>
+              The content of the Popper.
+            </Box>
+          </Fade>
+        )}
+      </Popper>
 
       <List sx={{ width: '100%', maxWidth: 240, color:theme.text.primary }} component="nav" aria-labelledby="nested-list-subheader">
         

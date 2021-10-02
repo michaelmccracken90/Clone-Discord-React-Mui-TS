@@ -1,5 +1,4 @@
 // Import Img Logo
-import Logo from '../../../Assets/logo.svg'
 
 // Import React 
 import * as React from 'react';

@@ -23,7 +23,7 @@ import Boot from './Boot/Index'
 
 const useStyles = makeStyles({
   List:{
-    borderLeft:(props:MessageExample ) => props.boot ?`1px solid ${theme.palette.primary.main}`: 'none'
+    borderLeft:'1px solid black'
   }
 })
 function refreshMessages(): MessageExample[] {
@@ -56,7 +56,7 @@ export default function FixedBottomNavigation(props: Props ) {
     event.target.style.color = theme.text.primary;
   }
  
-
+const classes = useStyles(props)
   
 
   return (
@@ -86,7 +86,7 @@ export default function FixedBottomNavigation(props: Props ) {
            
            }} disablePadding>
         {messages.map(({ primary, secondary, person, data, boot  }, index , ) => (
-          <ListItem button key={index + person}  >
+          <ListItem button key={index + person} className={classes.List} >
               {/* `1px solid ${theme.palette.primary.main}` */}
             <ListItemAvatar>
               <Avatar alt="Profile Picture" src={person} />

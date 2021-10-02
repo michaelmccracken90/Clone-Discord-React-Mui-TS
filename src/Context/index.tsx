@@ -11,6 +11,10 @@ type AuthContextType = {
   selectedIndex: number
   handleListItemClick: any
   handleChange: any
+  handleClick: any
+  id:any
+  open: boolean
+  anchorEl: HTMLElement | null
  
 }
 
@@ -40,11 +44,22 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
+  const [openModal, setOpenModal] = React.useState(false);
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const [open, setOpen] = React.useState(true);
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+    setOpenModal((previousOpen) => !previousOpen);
+    setOpen(!open)
+  };
+
+  const canBeOpen = openModal && Boolean(anchorEl);
+  const id = canBeOpen ? 'transition-popper' : undefined;
 
   
   // HTML AuthContextProvider
   return (
-    <AuthContext.Provider value={{  selectedIndex, handleListItemClick, value, handleChange  }}>
+    <AuthContext.Provider value={{  selectedIndex, handleListItemClick, value, handleChange, handleClick, id, open, anchorEl}}>
       {props.children}
     </AuthContext.Provider>
   );
