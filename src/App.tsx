@@ -1,6 +1,5 @@
 // Import React 
 import React from 'react';
-
 // Importando Routes
 import Routes from './Routes/Index';
 
@@ -9,6 +8,7 @@ function App() {
   // HTML 
   return (
     <Routes/>
+    // <Test/>
   );
 }
 // Exportando Component 

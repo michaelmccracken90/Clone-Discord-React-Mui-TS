@@ -12,9 +12,12 @@ import theme from './Styles/Theme';
 import CssBaseline from '@mui/material/CssBaseline';
 // Import Context State 
 import { AuthContextProvider } from './Context';
+import { StyledEngineProvider } from '@mui/material/styles';
 
 ReactDOM.render(
   <React.StrictMode>
+    <StyledEngineProvider injectFirst>
+
     <ThemeProvider theme={theme}>
       <CssBaseline>
         <AuthContextProvider>
@@ -22,6 +25,7 @@ ReactDOM.render(
         </AuthContextProvider>
       </CssBaseline>
     </ThemeProvider>
+    </StyledEngineProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

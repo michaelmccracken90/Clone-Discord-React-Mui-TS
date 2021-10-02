@@ -84,14 +84,14 @@ export default function ButtonServices(props: Props  & Omit<ListItemButtonProps,
   <ListItemSecondaryAction className='Teste' >
 
     <ListItemIcon sx={{minWidth:40}}>
-      <Tooltip title='Add Friends'>
+      <Tooltip title='Add Friends' arrow>
 
       <IconButton sx={{ marginRight: '5px', padding: 0, color:theme.text.primary, maxWidth:'16px', }}  >
 
       <BsPersonPlusFill  className={classes.icon}/>
       </IconButton>
       </Tooltip>
-      <Tooltip title='Config'>
+      <Tooltip title='Config' arrow sx={{backgroundColor:theme.background.tertiary}}>
 
       <IconButton sx={{ margin: 0, padding: 0, color:theme.text.primary, maxWidth:'16px', gap:5}}  >
 

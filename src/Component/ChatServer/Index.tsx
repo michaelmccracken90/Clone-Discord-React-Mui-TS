@@ -1,34 +1,19 @@
 // Import React
 import * as React from 'react';
 // Material UI
-import { Box, Grid,  Typography } from '@mui/material';
+import Message from './Message/Index'
+import { Box, Grid, } from '@mui/material';
 // Import Context of state application
 import { AuthContext } from '../../Context';
 // Import Context of Theme application
 import theme from '../../Styles/Theme';
-// import Input from '@mui/material/Input';
-// import { makeStyles } from '@mui/styles';
-// Types of component
+
 interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
   value: number;
 }
-// const useStyles = makeStyles({
-//   input:{
-//     border:'none',
-//     '&::after, &::before,':{
-//       border:'none',
-//       content: {
-//         display:'none'
-//       }
-//     },
-//     '&:hover':{
-//       border:'none'
-//     }
-//   }
-//   });
-// Componenet Interno
+
 function TabPanel(props: TabPanelProps) {
   // Estanciando props para reutilizar
   const {
@@ -48,8 +33,8 @@ function TabPanel(props: TabPanelProps) {
       {...other}
     >
       {selectedIndex === index ? (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
+        <Box sx={{   position:'relative'}}>
+          {children}
         </Box>
       ) : (<div>teste</div>)}
     </div>
@@ -72,6 +57,7 @@ export default function ChatServe() {
         display: 'flex',
         flexDirection: 'column',
         color: theme.text.primary,
+        padding:0
       }}
     >
       <Box sx={{
@@ -89,24 +75,25 @@ export default function ChatServe() {
           height: 'calc(100vh - 46px)',
         }}
         >
-          <TabPanel value={value} index={0}>
-            Conheça as tecnologias usadas na aplicação
+          <TabPanel value={value} index={0}  >
+            <Message />
+           
             {/* <Input type="text"  className={classes.input} /> */}
           </TabPanel>
           <TabPanel value={value} index={1}>
-            React
+          <Message />
           </TabPanel>
           <TabPanel value={value} index={2}>
-            Material Ui
+          <Message  />
           </TabPanel>
           <TabPanel value={value} index={3}>
-            TypeScript
+          <Message />
           </TabPanel>
           <TabPanel value={value} index={4}>
-            React Icons
+          <Message />
           </TabPanel>
           <TabPanel value={value} index={5}>
-            React Router Dom
+          <Message />
           </TabPanel>
 
         </Box>

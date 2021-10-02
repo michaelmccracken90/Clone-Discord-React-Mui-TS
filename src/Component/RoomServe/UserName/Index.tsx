@@ -82,24 +82,23 @@ export default function UserName() {
           </Box>
         </Box>
 
-      
-      <ListItemSecondaryAction sx={{alignItems: 'center', justifyContent:'center', display:'flex'}}>
+             <ListItemSecondaryAction sx={{alignItems: 'center', justifyContent:'center', display:'flex'}}>
       <ListItemIcon sx={{minWidth:40}}>
-        <Tooltip title='Silencial'>
+        <Tooltip title='Silencial' arrow>
 
       <IconButton sx={{ marginRight: '5px', padding: 0, color:theme.text.primary, maxWidth:'16px', }}  >
         
       <BsMicFill  className={classes.icon}/>
       </IconButton>
       </Tooltip>
-      <Tooltip title='Desativa audio'>
+      <Tooltip title='Desativa audio'arrow>
         
       <IconButton sx={{marginRight: '5px', padding: 0, color:theme.text.primary, maxWidth:'16px', gap:5}}  >
         
       <BiHeadphone className={classes.icon} />
       </IconButton>
       </Tooltip>
-      <Tooltip title='Configurações de usuario'>
+      <Tooltip title='Configurações de usuario'arrow>
         
       <IconButton sx={{ margin: 0, padding: 0, color:theme.text.primary, maxWidth:'16px', gap:5}}  >
         
