@@ -94,12 +94,13 @@ const classes = useStyles(props)
             <Box>
               <Box sx={{display: 'flex',  alignItems: 'center'}}>
 
-              <Typography variant='h5' component='h1' > {primary}</Typography>
+              <Typography variant='h1' component='h1' sx={{fontSize:'16px', color:'#fff', fontWeight:'700'}} > {primary}</Typography>
               
-              <Typography variant='body1'  component='h1' sx={{display:'flex', alignItems:'center', ml:'10px'}}> {data}</Typography>
+              <Typography variant='body1'  component='h1' sx={{display:'flex', alignItems:'center', ml:'10px' }}> {data}</Typography>
               <Boot selected={boot}> Boot </Boot>
               </Box >
-              <ListItemText primary={secondary}/>
+              <Typography variant='h1' component='h1' sx={{fontSize:'16px', color:'#ffffffcc', fontWeight:'400'}} > {secondary}</Typography>
+
               
 
               

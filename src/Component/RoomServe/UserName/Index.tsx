@@ -5,6 +5,7 @@ import { makeStyles } from "@mui/styles";
 import { BsGearFill } from "react-icons/bs";
 import { BsMicFill } from "react-icons/bs";
 import { BiHeadphone } from "react-icons/bi";
+import { BsMicMuteFill } from "react-icons/bs";
 import { styled } from '@mui/material/styles';
 import Badge from '@mui/material/Badge';
 // Import Context Theme Styled
@@ -98,14 +99,14 @@ export default function UserName() {
         <Tooltip title='Silencial' arrow>
 
       <IconButton sx={{ marginRight: '5px', padding: 0, color:theme.text.primary, maxWidth:'16px', }}  onClick={HandleMic} >
-      {openMic ?<BsMicFill className={classes.icon} />  : <BiHeadphone className={classes.icon} /> }
+      {openMic ?<BsMicFill className={classes.icon} />  : <BsMicMuteFill className={classes.icon} /> }
       
       </IconButton>
       </Tooltip>
       <Tooltip title='Desativa audio'arrow>
         
       <IconButton sx={{marginRight: '5px', padding: 0, color:theme.text.primary, maxWidth:'16px', gap:5}} onClick={HandleFone}  >
-      {openMic ?<BiHeadphone className={classes.icon} />  : <BsMicMuteFill className={classes.icon} /> }
+      {openMic ?<BiHeadphone className={classes.icon} />  : <BiHeadphone className={classes.icon} /> }
 
       
       </IconButton>
