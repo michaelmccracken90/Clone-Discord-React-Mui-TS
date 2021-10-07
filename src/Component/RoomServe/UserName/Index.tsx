@@ -111,7 +111,7 @@ export default function UserName() {
       
       </IconButton>
       </Tooltip>
-      <Tooltip title='Configurações de usuario'arrow>
+      <Tooltip title={'Configurações de usuario'} arrow>
         
       <IconButton sx={{ margin: 0, padding: 0, color:theme.text.primary, maxWidth:'16px', gap:5}}  >
         
