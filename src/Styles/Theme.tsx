@@ -35,24 +35,24 @@ declare module '@mui/material/styles' {
 // A custom theme for this app
 const theme = createTheme({
   text:{
-primary:""
+primary:"#8a8c90"
   },
 
   background: {
-    primary: '',
-    secondary: '',
-    tertiary: '',
-    active: '',
-    input: '',
-    user: ''
+    primary: '#36393F',
+    secondary: '#2F3136',
+    tertiary: '#202225',
+    active: '#413F3F',
+    input: '#40444B',
+    user: '#292B2F'
 
   },
   palette: {
     primary: {
-      main: '',
+      main: '#556cd6',
     },
     secondary: {
-      main: '',
+      main: '#19857b',
     },
 
   },

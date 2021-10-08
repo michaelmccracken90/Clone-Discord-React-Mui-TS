@@ -46,10 +46,13 @@ export default function RoomName() {
                height: '300px',
                width:'220px',
                borderRadius:'5px',
-               color:'#fff'
+               color:'#fff', 
+               display:'flex',
+               alignItems: 'center',
+               justifyContent: 'center',
                
                }}>
-              The content of the Popper.
+              In Construction Popper
             </Box>
           </Fade>
         )}

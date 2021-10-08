@@ -30,32 +30,32 @@ export default function ListServe() {
    
       }}>
       <ButtonServices isHome hasNotification />
-      <ButtonServices />
-      <ButtonServices mentions={23} />
-      <ButtonServices />
-      <ButtonServices isHome hasNotification />
-      <ButtonServices />
-      <ButtonServices mentions={23} />
-      <ButtonServices />
-      <ButtonServices isHome hasNotification />
-      <ButtonServices />
-      <ButtonServices mentions={23} />
-      <ButtonServices />
-      <ButtonServices isHome hasNotification />
-      <ButtonServices />
-      <ButtonServices isHome hasNotification />
-      <ButtonServices />
+      <ButtonServices  />
       <ButtonServices mentions={2} />
       <ButtonServices />
-      <ButtonServices isHome hasNotification />
+      <ButtonServices  hasNotification />
+      <ButtonServices />
+      <ButtonServices mentions={1} />
+      <ButtonServices />
+      <ButtonServices  hasNotification />
+      <ButtonServices />
+      <ButtonServices mentions={5} />
+      <ButtonServices />
+      <ButtonServices  hasNotification />
+      <ButtonServices />
+      <ButtonServices  hasNotification />
+      <ButtonServices />
+      <ButtonServices mentions={99} />
+      <ButtonServices />
+      <ButtonServices  hasNotification />
       <ButtonServices />
       <ButtonServices mentions={203} />
       <ButtonServices />
-      <ButtonServices isHome hasNotification />
+      <ButtonServices  hasNotification />
       <ButtonServices />
       <ButtonServices mentions={23} />
       <ButtonServices />
-      <ButtonServices isHome hasNotification />
+      <ButtonServices  hasNotification />
       <ButtonServices />
       
     </Grid>
